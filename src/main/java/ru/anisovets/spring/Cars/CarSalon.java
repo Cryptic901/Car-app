@@ -1,5 +1,6 @@
 package ru.anisovets.spring.Cars;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +41,13 @@ public class CarSalon {
 
     public void setCarList(List<Car> carList) {
         this.carList = carList;
+    }
+    public void carInit() {
+        System.out.println("Work starts");
+    }
+
+    public void carDestroy() {
+        System.out.println("Work ends");
     }
 }
 

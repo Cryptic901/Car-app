@@ -1,5 +1,8 @@
 package ru.anisovets.spring.Cars;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class LightCar implements Car {
     @Override
     public String getName() {
