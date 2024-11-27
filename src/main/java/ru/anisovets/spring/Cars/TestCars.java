@@ -11,9 +11,6 @@ public class TestCars {
         );
         context.start();
 
-//        CarSalon carSalon = context.getBean("carSalon", CarSalon.class);
-//        carSalon.repairCar();
-
         Street street = context.getBean("street", Street.class);
         System.out.println(street);
         context.close();

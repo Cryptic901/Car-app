@@ -8,18 +8,8 @@ import java.util.List;
 public class LightCar implements Car {
 
     @Override
-    public CarEnum getCarType() {
-        return CarEnum.LIGHT;
-    }
-
-    @Override
-    public int getId() {
-        return 2;
-    }
-
-    @Override
-    public List<String> getName() {
-        return List.of("Light0, Light1, Light2");
+    public String getName() {
+        return "Honda gomo";
     }
 
     @Override

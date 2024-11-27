@@ -9,22 +9,8 @@ import java.util.List;
 public class RacingCar implements Car {
 
     @Override
-    public CarEnum getCarType() {
-        return CarEnum.RACING;
-    }
-
-    @Override
-    public int getId() {
-        return 3;
-    }
-
-    @Override
-    public List<String> getName() {
-        List<String> racingCars = new ArrayList<>();
-        racingCars.add("Racing0");
-        racingCars.add("Racing1");
-        racingCars.add("Racing2");
-        return racingCars;
+    public String getName() {
+        return "Porsche 911 Hybrid";
     }
 
 

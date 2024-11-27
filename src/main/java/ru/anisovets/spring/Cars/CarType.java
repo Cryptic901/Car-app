@@ -1,9 +1,7 @@
 package ru.anisovets.spring.Cars;
 
-
-public enum CarEnum {
+public enum CarType {
     CARGO,
-    RACING,
-    LIGHT;
-
+    LIGHT,
+    RACING
 }

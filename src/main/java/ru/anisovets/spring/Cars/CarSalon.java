@@ -25,27 +25,25 @@ public class CarSalon {
         this.racingCar = racingCar;
     }
 
-
     @Autowired
     public void setCarList(List<Car> carList) {
         this.carList = carList;
     }
-    //enum-class-method=List-List(Random(0,3)
 
     public String repairCar() {
         Random rand = new Random();
+        int randomIndex = rand.nextInt(carList.size());
         StringBuilder ret = new StringBuilder();
         System.out.println("-----------------------------------");
         for (Car cars : carList) {
             System.out.println("Repairing car class: " + cars.getClass().getSimpleName());
-            System.out.println("With ID: " + cars.getId());
             System.out.println("With name: " + cars.getName());
             System.out.println("With color: " + cars.getColor());
             System.out.println("With engine power: " + cars.getEnginePower());
-            System.out.println("Car type: " + cars.getCarType());
             System.out.println("-----------------------------------");
             ret.append("\nRepairing: ").append(cars.getName()).append(" completed, ");
         }
+        System.out.println("Random car: " + carList.get(randomIndex).getName());
         return ret.toString();
     }
 
