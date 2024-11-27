@@ -11,8 +11,12 @@ public class CargoCar implements Car {
     }
 
     @Override
-    public String getName() {
-        return "КАМАЗ";
+    public String[] getName() {
+        String[] cargoCars = new String[3];
+        cargoCars[0] = "Cargo0";
+        cargoCars[1] = "Cargo1";
+        cargoCars[2] = "Cargo2";
+        return cargoCars;
     }
 
     @Override

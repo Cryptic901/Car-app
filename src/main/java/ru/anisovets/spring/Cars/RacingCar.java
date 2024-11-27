@@ -10,8 +10,12 @@ public class RacingCar implements Car{
     }
 
     @Override
-    public String getName() {
-        return "Porsche 911 Hybrid";
+    public String[] getName() {
+        String[] racingCars = new String[3];
+        racingCars[0] = "Racing0";
+        racingCars[1] = "Racing1";
+        racingCars[2] = "Racing2";
+        return racingCars;
     }
 
     @Override

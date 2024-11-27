@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
@@ -24,13 +25,13 @@ public class CarSalon {
             if (cars == car) {
                 System.out.println("Repairing car class: " + car.getClass().getSimpleName());
                 System.out.println("With ID: " + car.getId());
-                System.out.println("With name: " + car.getName());
+                System.out.println("With name: " + Arrays.toString(car.getName()));
                 System.out.println("With color: " + car.getColor());
                 System.out.println("With engine power: " + car.getEnginePower());
                 System.out.println("-----------------------------------");
             }
         }
-        return "Repairing car: " + car.getName() + " completed";
+        return "Repairing car: " + Arrays.toString(car.getName()) + " completed";
     }
 
     public void carInit() {

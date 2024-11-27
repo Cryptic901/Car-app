@@ -10,8 +10,12 @@ public class LightCar implements Car {
     }
 
     @Override
-    public String getName() {
-        return "Лимузин";
+    public String[] getName() {
+        String[] lightCars = new String[3];
+        lightCars[0] = "Light0";
+        lightCars[1] = "Light1";
+        lightCars[2] = "Light2";
+        return lightCars;
     }
 
     @Override
