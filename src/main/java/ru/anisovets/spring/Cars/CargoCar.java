@@ -4,6 +4,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CargoCar implements Car {
+
+    @Override
+    public int getId() {
+        return 1;
+    }
+
     @Override
     public String getName() {
         return "КАМАЗ";
@@ -19,7 +25,4 @@ public class CargoCar implements Car {
         return "240 horsepower";
     }
 
-    public void cargoInit() {
-        System.out.println("CargoCar start repairing");
-    }
 }

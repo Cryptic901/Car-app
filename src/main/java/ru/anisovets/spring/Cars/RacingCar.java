@@ -5,6 +5,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class RacingCar implements Car{
     @Override
+    public int getId() {
+        return 3;
+    }
+
+    @Override
     public String getName() {
         return "Porsche 911 Hybrid";
     }

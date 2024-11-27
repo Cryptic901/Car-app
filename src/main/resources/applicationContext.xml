@@ -10,7 +10,6 @@
     <context:property-placeholder location="CarSalon.properties"/>
     <context:component-scan base-package="ru.anisovets.spring.Cars"/>
 
-
     <bean id = "carList"
           class="java.util.ArrayList">
         <constructor-arg>
@@ -25,8 +24,8 @@
     <bean
             id="carSalon"
             class="ru.anisovets.spring.Cars.CarSalon"
-    init-method="carInit"
-    destroy-method="carDestroy">
+            init-method="carInit"
+            destroy-method="carDestroy">
         <property name="carList" ref="carList"/>
 
     </bean>
