@@ -1,8 +1,16 @@
 package ru.anisovets.spring.Cars;
 
+import java.util.List;
+
 public interface Car {
+
+    CarEnum getCarType();
+
     int getId();
-    String[] getName();
+
+    List<String> getName();
+
     String getColor();
+
     String getEnginePower();
 }

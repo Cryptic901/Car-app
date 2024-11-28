@@ -16,6 +16,6 @@ public class Street {
 
     @Override
     public String toString() {
-        return "Street: " + name + ", Salon: " + carSalon.repairCar();
+        return "Street: " + name + ", " + carSalon.repairCar();
     }
 }
