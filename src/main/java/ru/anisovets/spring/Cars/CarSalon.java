@@ -1,17 +1,18 @@
 package ru.anisovets.spring.Cars;
+
 import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Component
 public class CarSalon {
     private List<Car> carList;
-    private Car car;
+    @Autowired
     private Car cargoCar;
     private Car lightCar;
     private Car racingCar;
@@ -32,13 +33,24 @@ public class CarSalon {
     }
     //enum-class-method=List-List(Random(0,3)
 
-    public String repairCar() {
+    public String repairCar(CarEnum carEnum) {
         Random rand = new Random();
+        List<Car> filteredList = new ArrayList<>();
         StringBuilder ret = new StringBuilder();
+
+        for (Car carRandom : carList) {
+
+            if (carEnum.equals(carRandom.getCarType())) {
+                filteredList.add(carRandom);
+
+                int randomIndex = rand.nextInt(filteredList.size());
+                Car randomCar = filteredList.get(randomIndex);
+                System.out.println("Random car: " + randomCar);
+            }
+        }
         System.out.println("-----------------------------------");
         for (Car cars : carList) {
-            System.out.println("Repairing car class: " + cars.getClass().getSimpleName());
-            System.out.println("With ID: " + cars.getId());
+            System.out.println("Car class: " + cars.getClass().getSimpleName());
             System.out.println("With name: " + cars.getName());
             System.out.println("With color: " + cars.getColor());
             System.out.println("With engine power: " + cars.getEnginePower());

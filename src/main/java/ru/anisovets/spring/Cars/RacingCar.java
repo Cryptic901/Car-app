@@ -2,7 +2,6 @@ package ru.anisovets.spring.Cars;
 
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component("racingCar")
@@ -14,29 +13,18 @@ public class RacingCar implements Car {
     }
 
     @Override
-    public int getId() {
-        return 3;
-    }
-
-    @Override
     public List<String> getName() {
-        List<String> racingCars = new ArrayList<>();
-        racingCars.add("Racing0");
-        racingCars.add("Racing1");
-        racingCars.add("Racing2");
-        return racingCars;
+        return List.of("RacingCar0", "RacingCar1", "RacingCar2");
     }
 
 
     @Override
-    public String getColor() {
-        return "White";
+    public List<String> getColor() {
+        return List.of("RacingColor0", "RacingColor1", "RacingColor2");
     }
 
     @Override
-    public String getEnginePower() {
-        return "900 horsepower";
+    public List<String> getEnginePower() {
+        return List.of("RacingPower0", "RacingPower1", "RacingPower2");
     }
-
-
 }

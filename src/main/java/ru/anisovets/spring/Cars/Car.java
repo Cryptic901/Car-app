@@ -6,11 +6,10 @@ public interface Car {
 
     CarEnum getCarType();
 
-    int getId();
 
     List<String> getName();
 
-    String getColor();
+    List<String> getColor();
 
-    String getEnginePower();
+    List<String> getEnginePower();
 }

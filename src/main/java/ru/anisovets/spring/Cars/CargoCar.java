@@ -7,7 +7,6 @@ import java.util.List;
 @Component("cargoCar")
 public class CargoCar implements Car {
 
-
     @Override
     public CarEnum getCarType() {
         return CarEnum.CARGO;
@@ -15,23 +14,18 @@ public class CargoCar implements Car {
 
 
     @Override
-    public int getId() {
-        return 1;
-    }
-
-    @Override
     public List<String> getName() {
         return List.of("Cargo0, Cargo1, Cargo2");
     }
 
     @Override
-    public String getColor() {
-        return "Blue";
+    public List<String> getColor() {
+        return List.of("CargoColor0, CargoColor1, CargoColor2");
     }
 
     @Override
-    public String getEnginePower() {
-        return "240 horsepower";
+    public List<String> getEnginePower() {
+        return List.of("CargoPower0, CargoPower1, CargoPower2");
     }
 
 

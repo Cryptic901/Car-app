@@ -13,22 +13,17 @@ public class LightCar implements Car {
     }
 
     @Override
-    public int getId() {
-        return 2;
-    }
-
-    @Override
     public List<String> getName() {
-        return List.of("Light0, Light1, Light2");
+        return List.of("LightCar0, LightCar1, LightCar2");
     }
 
     @Override
-    public String getColor() {
-        return "White";
+    public List<String> getColor() {
+        return List.of("LightColor0, LightColor1, LightColor2");
     }
 
     @Override
-    public String getEnginePower() {
-        return "200 horsepower";
+    public List<String>  getEnginePower() {
+        return List.of("LightColor0, LightColor1, LightColor2");
     }
 }
