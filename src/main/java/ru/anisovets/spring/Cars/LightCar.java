@@ -2,29 +2,28 @@ package ru.anisovets.spring.Cars;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import java.util.List;
+
+@Component("lightCar")
 public class LightCar implements Car {
+
     @Override
-    public int getId() {
-        return 2;
+    public CarEnum getCarType() {
+        return CarEnum.LIGHT;
     }
 
     @Override
-    public String[] getName() {
-        String[] lightCars = new String[3];
-        lightCars[0] = "Light0";
-        lightCars[1] = "Light1";
-        lightCars[2] = "Light2";
-        return lightCars;
+    public List<String> getName() {
+        return List.of("LightCar0, LightCar1, LightCar2");
     }
 
     @Override
-    public String getColor() {
-        return "White";
+    public List<String> getColor() {
+        return List.of("LightColor0, LightColor1, LightColor2");
     }
 
     @Override
-    public String getEnginePower() {
-        return "200 horsepower";
+    public List<String>  getEnginePower() {
+        return List.of("LightColor0, LightColor1, LightColor2");
     }
 }

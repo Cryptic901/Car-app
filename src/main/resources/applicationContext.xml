@@ -15,9 +15,9 @@
         <constructor-arg>
             <list>
                 <ref bean="cargoCar"/>
-                <ref bean="lightCar"/>
-                <ref bean="racingCar"/>
-            </list>
+            <ref bean="lightCar"/>
+            <ref bean="racingCar"/>
+        </list>
         </constructor-arg>
     </bean>
 
