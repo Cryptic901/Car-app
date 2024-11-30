@@ -2,7 +2,7 @@ package ru.anisovets.spring.Cars;
 
 import org.springframework.stereotype.Component;
 
-@Component("cargoCar")
+
 public class CargoCar implements Car {
 
     @Override

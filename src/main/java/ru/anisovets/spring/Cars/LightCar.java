@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component("lightCar")
 public class LightCar implements Car {
 
     @Override
